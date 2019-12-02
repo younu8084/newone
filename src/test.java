@@ -22,6 +22,7 @@ import org.openqa.selenium.Keys;
 import java.util.*;
 import java.net.MalformedURLException;
 import java.net.URL;
+import org.testng.annotations.Test;
 public class Test1Test {
   private WebDriver driver;
   private Map<String, Object> vars;
