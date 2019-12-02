@@ -27,24 +27,21 @@ public class Test1Test {
   private WebDriver driver;
   private Map<String, Object> vars;
   JavascriptExecutor js;
-  @Before
+  
   public void setUp() {
     driver = new ChromeDriver();
     js = (JavascriptExecutor) driver;
     System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
     vars = new HashMap<String, Object>();
+  }
+  
+  @Test
+  public void test1() {
     options.addArguments("--headless");
         options.addArguments("--disable-gpu");
         options.addArguments("window-size=1024,768");
         options.addArguments("--no-sandbox");
 
-  }
-  @After
-  public void tearDown() {
-    driver.quit();
-  }
-  @Test
-  public void test1() {
     driver.get("https://www.espncricinfo.com/");
     driver.manage().window().setSize(new Dimension(1382, 744));
     js.executeScript("window.scrollTo(0,1)");
