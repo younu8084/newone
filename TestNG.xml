@@ -3,7 +3,7 @@
 
 	<test name="Test1Test" group-by-instances="true" verbose="3">
     		<classes>
-		    	<class name="Test1Test" />
+		    	<class name="test.java" />
 		    </classes>
 	</test>
 </suite>
